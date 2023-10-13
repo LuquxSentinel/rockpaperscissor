@@ -1,4 +1,4 @@
-
+import random 
 # Write you code below to determine a game of rock, ppaper, scissors.
 
 """Prompts the user to choose rock, paper, or scissors and returns the user's choice."""
@@ -9,7 +9,9 @@ def get_user_input():
 
 """Generates a random choice (rock, paper, or scissors) for the computer and returns it."""
 def generate_computer_choice():
-    pass
+    choices = ["rock", "paper", "scissor"]
+    computer_choice = random.choice(choices)  
+    return computer_choice
 
 
 
