@@ -1,11 +1,14 @@
 import unittest
-from  game import get_user_input, generate_computer_choice, determine_winner, display_result
+from unittest.mock import patch
+from  game import *
 
 class TestGame(unittest.TestCase):
     
-    def test_get_user_input(self):
+    @patch('builtins.input', side_effect=['pper', 'ppew', '223r', 'paper'])
+    def test_get_user_input(self, input):
         user_choice = get_user_input()
         self.assertIn (user_choice, ["rock", "paper", "scissor"])
+    
     
     def test_generate_computer_choice(self):
         computer_choice = generate_computer_choice()

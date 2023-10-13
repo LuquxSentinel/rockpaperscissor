@@ -1,10 +1,16 @@
-import random 
+import random
+
 # Write you code below to determine a game of rock, ppaper, scissors.
 
 """Prompts the user to choose rock, paper, or scissors and returns the user's choice."""
 def get_user_input():
-    pass
-    
+    while True:
+        user_choice = input("Choose rock, paper, or scissors: ").lower().strip()
+        if user_choice not in ("rock", "paper", "scissors"):
+            print("Invalid choice. Please choose 'rock,' 'paper,' or 'scissors.'")
+            continue
+        else:
+            return user_choice
 
 
 """Generates a random choice (rock, paper, or scissors) for the computer and returns it."""

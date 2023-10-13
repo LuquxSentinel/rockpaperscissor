@@ -16,9 +16,11 @@ class TestTestGame(unittest.TestCase):
     
     def test_test_determine_winner(self):
         try:
-            self.testGame.test_determine_winner()
+            self.testGame.test_user_win()
+            self.testGame.test_computer_wins()
+            self.testGame.test_draw()
         except:
             raise AssertionError
 
-# if __name__ == '__main__':
+if __name__ == '__main__':
 #     unittest.main()
