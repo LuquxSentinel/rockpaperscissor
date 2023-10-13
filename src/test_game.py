@@ -6,11 +6,14 @@ class TestGame(unittest.TestCase):
     
     @patch('builtins.input', side_effect=['pper', 'ppew', '223r', 'paper'])
     def test_get_user_input(self, input):
+        """Allows user to input a an option from a given list(rock,paper.scissor).
+        If option not in list it prints 'Invalid choice. Please choose 'rock,' 'paper,' or 'scissors.'"""
         user_choice = get_user_input()
         self.assertIn (user_choice, ["rock", "paper", "scissor"])
     
     
     def test_generate_computer_choice(self):
+        '''Determines computer choice by generating a list(rock,paper,scissor) and choosing a random choice'''
         computer_choice = generate_computer_choice()
         self.assertTrue(computer_choice.isalpha())
 
