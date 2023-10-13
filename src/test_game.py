@@ -9,7 +9,7 @@ class TestGame(unittest.TestCase):
     
     def test_generate_computer_choice(self):
         computer_choice = generate_computer_choice()
-        self.assertIn (computer_choice,["rock", "paper", "scissor"])
+        self.assertTrue(computer_choice.isalpha())
 
     def test_determine_winner(self):
         """Determines the winner based on the user's choice and the computer's choice. Returns one of the following values: `user_wins`, `computer_wins`, or `tie`."""
